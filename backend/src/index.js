@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
 import http from 'http';
 import fs from 'fs/promises';
 import path from 'path';

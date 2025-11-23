@@ -10,6 +10,16 @@ A full-featured, user-friendly GUI for ComfyUI with a customizable interface and
 - **Workflow Management**: Save, load, and manage multiple workflows
 - **ComfyUI Integration**: Seamless integration with ComfyUI backend
 - **Real-time Execution**: Execute workflows directly from the GUI
+- **Cross-Platform**: Works on Windows, macOS, and Linux
+
+## Platform Compatibility
+
+This application is fully compatible with Windows, macOS, and Linux. All scripts and tools have been configured for cross-platform operation:
+
+- Uses Node.js and npm (cross-platform)
+- Nodemon for development auto-reload (works on all platforms)
+- Path handling uses Node.js `path` module for cross-platform compatibility
+- No platform-specific shell commands required
 
 ## Architecture
 
@@ -24,6 +34,23 @@ The application consists of two main parts:
 - ComfyUI running locally (default: http://127.0.0.1:8188)
 
 ## Installation
+
+### Windows
+
+1. Clone the repository:
+```cmd
+git clone <repository-url>
+cd Comfy_GUI_marduk191
+```
+
+2. Install dependencies:
+```cmd
+npm install
+```
+
+This will install dependencies for both frontend and backend workspaces.
+
+### macOS / Linux
 
 1. Clone the repository:
 ```bash
@@ -202,6 +229,26 @@ If the app cannot connect to ComfyUI:
 If real-time updates aren't working:
 1. Check that ComfyUI's WebSocket is accessible
 2. Ensure the backend proxy is running correctly
+
+### Windows-Specific Issues
+
+**Port Already in Use:**
+If you see an error about ports 3000 or 3001 being in use:
+1. Open Command Prompt as Administrator
+2. Find the process using the port: `netstat -ano | findstr :3000`
+3. Kill the process: `taskkill /PID <process-id> /F`
+
+**Firewall Issues:**
+If the frontend cannot connect to the backend:
+1. Windows Firewall may be blocking the connection
+2. Allow Node.js through the firewall when prompted
+3. Or manually add an exception in Windows Defender Firewall settings
+
+**Node.js Not Found:**
+If you see "node is not recognized":
+1. Ensure Node.js is installed from https://nodejs.org/
+2. Restart your terminal after installation
+3. Verify installation: `node --version` and `npm --version`
 
 ## Contributing
 

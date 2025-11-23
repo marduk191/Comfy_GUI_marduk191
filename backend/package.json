@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/index.js",
-    "build": "echo 'No build step required'",
+    "dev": "nodemon src/index.js",
+    "build": "echo No build step required",
     "start": "node src/index.js"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/cors": "^2.8.17",
-    "@types/ws": "^8.5.10"
+    "@types/ws": "^8.5.10",
+    "nodemon": "^3.0.2"
   }
 }
