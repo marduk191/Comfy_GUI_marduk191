@@ -1,0 +1,28 @@
+{
+  "name": "comfy-gui-marduk191",
+  "version": "1.0.0",
+  "description": "Full-featured GUI for ComfyUI with editable interface and workflow editor",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "npm run start --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "comfyui",
+    "gui",
+    "workflow",
+    "node-editor"
+  ],
+  "author": "marduk191",
+  "license": "MIT"
+}
