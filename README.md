@@ -1,6 +1,6 @@
 # ComfyUI GUI
 
-A full-featured, user-friendly GUI for ComfyUI with a customizable interface and powerful workflow editor.
+A framework that can be used to create a full-featured, user-friendly GUI for ComfyUI.
 
 ## Features
 
